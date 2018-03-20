@@ -244,4 +244,9 @@ abstract class BaseAbstractGateway extends AbstractGateway
     {
         return $this->createRequest('\Omnipay\WechatPay\Message\DownloadBillRequest', $parameters);
     }
+
+    public function b2cPayment($parameters = array ())
+    {
+        return $this->createRequest('\Omnipay\WechatPay\Message\BusinessPayCustomerRequest', $parameters);
+    }
 }
